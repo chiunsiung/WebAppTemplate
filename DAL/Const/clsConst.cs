@@ -11,7 +11,7 @@ namespace DAL
         public static string SysDBConnString()
         {
             string DbHost = "47.254.229.107";
-            string DbName = "VoucherV2";
+            string DbName = "TestingDB";
             string DbUsername = "sa";
             string DbPassword = "Nomoneynotalk88!";
 

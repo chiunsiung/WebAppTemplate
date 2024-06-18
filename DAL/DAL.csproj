@@ -59,6 +59,7 @@
     <Compile Include="Common\clsSecurity.cs" />
     <Compile Include="Common\SecurityHelper.cs" />
     <Compile Include="Const\clsConst.cs" />
+    <Compile Include="Data\clsTrash.cs" />
     <Compile Include="Data\clsTTemp.cs" />
     <Compile Include="Data\clsTTempDetail.cs" />
     <Compile Include="Data\clsTTempDetail_cus_neix.cs" />

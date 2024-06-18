@@ -130,14 +130,14 @@
                                         <h5>Sales Today</h5>
                                     </div>
                                     <div class="row text-center my-2">
-                                        <h2>19.90</h2>
+                                        <h2>@ViewData["total_today_sales_transaction"]</h2>
                                     </div>
                                     <div class="row">
                                         <div class="col">
                                             <p>Number of Orders:</p>
                                         </div>
                                         <div class="col-md-auto text-xxl-end">
-                                            <p>0</p>
+                                            <p>@ViewData["total_today_num_order"]</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -145,7 +145,7 @@
                                             <p>Number of Refunds:</p>
                                         </div>
                                         <div class="col-md-auto text-xxl-end">
-                                            <p>0</p>
+                                            <p>@ViewData["total_today_num_refunds"]</p>
                                         </div>
                                     </div>
                                 </div>

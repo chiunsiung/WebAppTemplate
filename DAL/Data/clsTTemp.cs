@@ -82,6 +82,34 @@ namespace DAL
             return result;
         }
 
+        public static List<clsTTemp> GetAllList(int Id)
+        {
+            List<clsTTemp> result = new List<clsTTemp>();
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = GetAllDataTable(Id);
+                if (dt.Rows.Count == 0)
+                {
+                    result = null;
+                }
+                else
+                {
+                    for (int ind = 0; ind <= dt.Rows.Count - 1; ind++)
+                    {
+                        clsTTemp obj = DtToObj(dt.Rows[ind]);
+                        result.Add(obj);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                result = null;
+                clsLogger.ErrorLog(fstrPageName, ex);
+            }
+            return result;
+        }
+
         public static List<clsTTemp> GetListByPK(int Id)
         {
             List<clsTTemp> result = new List<clsTTemp>();
