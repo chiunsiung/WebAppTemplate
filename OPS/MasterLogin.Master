@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterLogin.master.cs" Inherits="OPS.MasterLogin" %>
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body><style type="text/css">
+    .nav
+    {
+        width:100%;
+        padding-left:15px;
+    }
+     .footer {
+   position: fixed;
+   
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: grey;
+   color: white;
+   text-align: center;
+   
+  
+}  .header_style {
+            text-align: center; 
+            font-size: 30pt;
+            margin-top:-5px;
+            margin-bottom:-10px;
+        }
+</style> 
+    <form id="form1" runat="server">
+    <div>
+        <p class="header_style"><strong>BCOS OPS Portal</strong></p>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+             <div class="footer text-center " > 
+                    <p>Powered by VigTech Labs Sdn Bhd Ver <a href="about.txt"> <%=System.Configuration.ConfigurationManager.AppSettings["Version"]%></a></p>           
+</div>
+    </form>
+</body>
+</html>

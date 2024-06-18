@@ -130,7 +130,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: calc(1.225rem + 0.9vw);
 }
 
 @media (min-width: 1200px) {
@@ -12866,3 +12866,4 @@ body {
     font-size: 0.75rem;
     border-radius: 0.375rem !important;
 }
+

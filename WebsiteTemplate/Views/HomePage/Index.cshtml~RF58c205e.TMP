@@ -14,15 +14,13 @@
     <meta name="author" content="" />
     <title>Dashboard - SB Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <link href="~/assets/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.cshtml">Testing</a>
+        <a class="navbar-brand ps-3" href="index.cshtml">Start Bootstrap</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -111,7 +109,7 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    User Name
+                    Start Bootstrap
                 </div>
             </nav>
         </div>
@@ -124,145 +122,52 @@
                     </ol>
                     <div class="row mb-4">
                         <div class="col-md-2">
-                            <div class="card text-bg-light h-100">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <h5>Sales Today</h5>
-                                    </div>
-                                    <div class="row text-center my-2">
-                                        <h2>19.90</h2>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>Number of Orders:</p>
-                                        </div>
-                                        <div class="col-md-auto text-xxl-end">
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>Number of Refunds:</p>
-                                        </div>
-                                        <div class="col-md-auto text-xxl-end">
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="card text-bg-light h-100">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <h5>Sales Yesterday</h5>
-                                    </div>
-                                    <div class="row text-center my-2">
-                                        <h2>199.90</h2>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>Number of Orders:</p>
-                                        </div>
-                                        <div class="col-md-auto text-xxl-end">
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>Number of Refunds:</p>
-                                        </div>
-                                        <div class="col-md-auto text-xxl-end">
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="card text-bg-light h-100">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <h5>Sales This Month</h5>
-                                    </div>
-                                    <div class="row text-center my-2">
-                                        <h2>1990.90</h2>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>Number of Orders:</p>
-                                        </div>
-                                        <div class="col-md-auto text-xxl-end">
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>Number of Refunds:</p>
-                                        </div>
-                                        <div class="col-md-auto text-xxl-end">
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-3">
                             <div class="card text-bg-light">
                                 <div class="card-body">
-                                    <div class="row">
-                                        <h5>Machine Status</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="text-center">
-                                            <h2>15</h2>
-                                            <p>Online</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="text-center">
-                                                <h2>81</h2>
-                                                <p>Offline</p>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="text-center">
-                                                <h2>0</h2>
-                                                <p>Outage</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <h5>Sales Today</h5>
+                                    <h2>19.90</h2>
+                                    <p>Number of Orders: 0</p>
+                                    <p>Number of Refunds: 0</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="card text-bg-light h-100">
+                        <div class="col-md-2">
+                            <div class="card text-bg-light">
                                 <div class="card-body">
-                                    <div class="row">
-                                        <div class="col">
-                                            <h5>To Do</h5>
-                                        </div>
-                                        <div class="col"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>Item Jammed</p>
-                                        </div>
-                                        <div class="col">
-                                            <p>Order Complaint</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>Temperature</p>
-                                        </div>
-                                        <div class="col">
-                                            <p>Exception Order</p>
-                                        </div>
-                                    </div>
+                                    <h5> Sales Yesterday</h5>
+                                    <h2>199.90</h2>
+                                    <p>Number of Orders: 0</p>
+                                    <p>Number of Refunds: 0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card text-bg-light">
+                                <div class="card-body">
+                                    <h5> Sales This Month</h5>
+                                    <h2>1990.90</h2>
+                                    <p>Number of Order: 0 </p>
+                                    <p>Number of Refunds: 0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-bg-light">
+                                <div class="card-body">
+                                    <h5>Testing</h5>
+                                    <h2>19.90</h2>
+                                    <p>Number of Orders: 0</p>
+                                    <p>Number of Refunds: 0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-bg-light">
+                                <div class="card-body">
+                                    <h5> Testing</h5>
+                                    <h2>199.90</h2>
+                                    <p>Number of Orders: 0</p>
+                                    <p>Number of Refunds: 0</p>
                                 </div>
                             </div>
                         </div>
