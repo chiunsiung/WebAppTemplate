@@ -34,6 +34,7 @@ namespace WebsiteTemplate.Controllers
             ViewData["total_today_num_refunds"] = clsCommon.ToDbl(tdy_sales_obj["total_today_num_refunds"]);
 
             // Data Is Stored Here
+            // YouTube Tutorial
             List<clsTTemp> itemLs = clsTTemp.GetAllList(-1);
 
             int num = itemLs.Count;
