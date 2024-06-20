@@ -50,7 +50,7 @@ flowchart LR
   - [x] 2/2
 - [x] Pass Data From C# to HTML
   - [x] 1/2
-  - [ ] 2/2 (Pass List Data) (Tmr)
+  - [x] 2/2 (Pass List Data) (Tmr)
 
 - [ ] Pass Data From C# to SQL (Future)
 - [ ] Pass Data From HTML to C# (Future)
