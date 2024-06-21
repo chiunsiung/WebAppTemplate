@@ -131,6 +131,7 @@ h1, .h1 {
 
 h2, .h2 {
     font-size: calc(1.225rem + 0.9vw);
+    color: blue;
 }
 
 @media (min-width: 1200px) {
@@ -8881,7 +8882,7 @@ textarea.form-control-lg {
     --bs-text-opacity: 1;
     color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
-
+me-1
 .text-white {
     --bs-text-opacity: 1;
     color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
@@ -12866,4 +12867,3 @@ body {
     font-size: 0.75rem;
     border-radius: 0.375rem !important;
 }
-

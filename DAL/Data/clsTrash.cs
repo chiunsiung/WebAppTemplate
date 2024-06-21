@@ -12,13 +12,13 @@ namespace DAL
     {
         public static string fstrPageName = "clsTrash";
 
-        public static DataTable TTemp_SelectAll() {
+        public static DataTable TTemp_SelectAll()
+        {
             DataTable result = null;
-        
             try
             {
                 result = new DataTable();
-        
+
                 using (SqlConnection Conn = new SqlConnection(clsConst.SysDBConnString()))
                 {
                     Conn.Open();
@@ -33,7 +33,7 @@ namespace DAL
                         Param.Direction = ParameterDirection.Input;
                         Param.Value = -1;
                         command.Parameters.Add(Param);
-        
+
                         SqlDataReader SQLReader = command.ExecuteReader();
                         result.Load(SQLReader);
                         SQLReader.Close();
@@ -47,21 +47,23 @@ namespace DAL
             return result;
         }
 
-        public static DataTable TMachine_StatusData() {
+
+        public static DataTable SalesToday()
+        {
             DataTable result = null;
-        
+
             try
             {
                 result = new DataTable();
-        
+
                 using (SqlConnection Conn = new SqlConnection(clsConst.SysDBConnString()))
                 {
                     Conn.Open();
-                    using (SqlCommand command = new SqlCommand("NSP_TMachine_StatusData", Conn))
+                    using (SqlCommand command = new SqlCommand("NSP_SalesToday", Conn))
                     {
                         SqlParameter Param = null;
                         command.CommandType = CommandType.StoredProcedure;
-        
+
                         SqlDataReader SQLReader = command.ExecuteReader();
                         result.Load(SQLReader);
                         SQLReader.Close();
@@ -75,49 +77,22 @@ namespace DAL
             return result;
         }
 
-        public static DataTable TOrderTransaction_TdySales() {
+        public static DataTable SalesLastWeek()
+        {
             DataTable result = null;
-        
+
             try
             {
                 result = new DataTable();
-        
+
                 using (SqlConnection Conn = new SqlConnection(clsConst.SysDBConnString()))
                 {
                     Conn.Open();
-                    using (SqlCommand command = new SqlCommand("NSP_TOrderTransaction_TdySales", Conn))
+                    using (SqlCommand command = new SqlCommand("NSP_SalesLastWeek", Conn))
                     {
                         SqlParameter Param = null;
                         command.CommandType = CommandType.StoredProcedure;
-        
-                        SqlDataReader SQLReader = command.ExecuteReader();
-                        result.Load(SQLReader);
-                        SQLReader.Close();
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                clsLogger.ErrorLog(fstrPageName, ex);
-            }
-            return result;
-        }
-        
-        public static DataTable TOrderTransaction_YtdSales() {
-            DataTable result = null;
-        
-            try
-            {
-                result = new DataTable();
-        
-                using (SqlConnection Conn = new SqlConnection(clsConst.SysDBConnString()))
-                {
-                    Conn.Open();
-                    using (SqlCommand command = new SqlCommand("TOrderTransaction_YtdSales", Conn))
-                    {
-                        SqlParameter Param = null;
-                        command.CommandType = CommandType.StoredProcedure;
-        
+
                         SqlDataReader SQLReader = command.ExecuteReader();
                         result.Load(SQLReader);
                         SQLReader.Close();
@@ -131,21 +106,22 @@ namespace DAL
             return result;
         }
 
-        public static DataTable TOrderTransaction_MthSales() {
+        public static DataTable SalesLastMonth()
+        {
             DataTable result = null;
-        
+
             try
             {
                 result = new DataTable();
-        
+
                 using (SqlConnection Conn = new SqlConnection(clsConst.SysDBConnString()))
                 {
                     Conn.Open();
-                    using (SqlCommand command = new SqlCommand("NSP_TOrderTransaction_MthSales", Conn))
+                    using (SqlCommand command = new SqlCommand("NSP_SalesLastMonth", Conn))
                     {
                         SqlParameter Param = null;
                         command.CommandType = CommandType.StoredProcedure;
-        
+
                         SqlDataReader SQLReader = command.ExecuteReader();
                         result.Load(SQLReader);
                         SQLReader.Close();

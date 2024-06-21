@@ -1,59 +1,63 @@
 ﻿using DAL;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebsiteTemplate.Models;
 
 namespace WebsiteTemplate.Controllers
 {
     public class HomePageController : Controller
     {
-        
+
         // GET: HomePage
         [HttpGet]
         public ActionResult Index()
         {
-            //var Sales = from e in db.TTemp
-            //         orderby e.ID
-            //         select e;
+            //// Row Count: 1
+            //DataTable tdy_sales_dt = clsTrash.TOrderTransaction_TdySales();
 
-            //return View(Sales);
+            //// DataTable is Like List
+            //// Get Value
 
-            // Row Count: 1
-            DataTable tdy_sales_dt = clsTrash.TOrderTransaction_TdySales();
+            //DataRow tdy_sales_obj = tdy_sales_dt.Rows[0];
 
-            // DataTable is Like List
-            // Get Value
+            //ViewData["total_today_sales_transaction"] = clsCommon.ToDbl(tdy_sales_obj["total_today_sales_transaction"]);
+            //ViewData["total_today_num_order"] = clsCommon.ToDbl(tdy_sales_obj["total_today_num_order"]);
+            //ViewData["total_today_num_refunds"] = clsCommon.ToDbl(tdy_sales_obj["total_today_num_refunds"]);
 
-            DataRow tdy_sales_obj = tdy_sales_dt.Rows[0];
+            //// Data Is Stored Here
+            //// YouTube Tutorial
+            //List<clsTTemp> itemLs = clsTTemp.GetAllList(-1);
 
-            ViewData["total_today_sales_transaction"] = clsCommon.ToDbl(tdy_sales_obj["total_today_sales_transaction"]);
-            ViewData["total_today_num_order"] = clsCommon.ToDbl(tdy_sales_obj["total_today_num_order"]);
-            ViewData["total_today_num_refunds"] = clsCommon.ToDbl(tdy_sales_obj["total_today_num_refunds"]);
+            ////Testing
+            ////int num = itemLs.Count;
 
-            // Data Is Stored Here
-            // YouTube Tutorial
-            List<clsTTemp> itemLs = clsTTemp.GetAllList(-1);
+            //ViewData["Trash"] = "Hello, World";
 
-            int num = itemLs.Count;
+            DataTable todaySales_Dt = clsTrash.SalesToday();
+            DataRow todaySales_Dt_obj = todaySales_Dt.Rows[0];
+            ViewData["Total_TodaySales"] = clsCommon.ToDbl(todaySales_Dt_obj["TotalSales"]);
 
-            ViewData["Trash"] = "Hello, World";
+            DataTable lastWeekSales_Dt = clsTrash.SalesLastWeek();
+            DataRow lastWeekSales_Dt_obj = lastWeekSales_Dt.Rows[0];
+            ViewData["Total_LastWeekSales"] = clsCommon.ToDbl(lastWeekSales_Dt_obj["TotalSales"]);
 
-            // for (int ind = 0; ind <= tdy_sales_dt.Rows.Count - 1; ind++)
-            // {
-            //     DataRow dr = tdy_sales_dt.Rows[ind];
+            DataTable lastMonthSales_Dt = clsTrash.SalesLastMonth();
+            DataRow lastMonthSales_Dt_obj = lastMonthSales_Dt.Rows[0];
+            ViewData["Total_LastMonthSales"] = clsCommon.ToDbl(lastMonthSales_Dt_obj["TotalSales"]);
 
-            //     obj.Id = clsCommon.ToInt(dr["Id"]);
-            //     obj.Title = clsCommon.ToStr(dr["Title"]);
-            //     obj.Quantity = clsCommon.ToInt(dr["Quantity"]);
-            //     obj.Price = clsCommon.ToDbl(dr["Price"]);
-            //     obj.Category = clsCommon.ToStr(dr["Category"]);
-            //     obj.MetaData = clsCommon.ToStr(dr["MetaData"]);
-            //     obj.Created_By = clsCommon.ToStr(dr["Created_By"]);
-            //     obj.Created_At = clsCommon.ToDateTime(dr["Created_At"]).ToString(clsConst.constDate_SQLDateFmt);
-            // }
+
+            List<DataPoint> dataPoints = new List<DataPoint>();
+
+            dataPoints.Add(new DataPoint("Today Sales",(Double)ViewData["Total_TodaySales"]));
+            dataPoints.Add(new DataPoint("Last Week Sales", (Double)ViewData["Total_LastWeekSales"]));
+            dataPoints.Add(new DataPoint("Last Month Sales", (Double)ViewData["Total_LastMonthSales"]));
+
+            ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
 
             return View();
         }
